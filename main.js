@@ -26,7 +26,7 @@ document.getElementById("checkout-form").addEventListener("submit", function(e) 
   const address = document.getElementById("address").value.trim();
   const card = document.getElementById("card").value.trim();
 
-  if (name && email && address && /^\d{9}$/.test(card)) {
+  if (name && email && address && card.lenght == 9) {
     const deliveryDate = new Date();
     deliveryDate.setDate(deliveryDate.getDate() + 5); // 5-day delivery
     alert(`Thank you for your purchase, ${name}! Your order will be delivered by ${deliveryDate.toDateString()}.`);
